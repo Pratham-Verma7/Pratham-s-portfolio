@@ -1,7 +1,7 @@
 export const socialLinks = [
   {
     label: 'Linkedin',
-    url: 'https://www.linkedin.com/in/dr-saloni-kabra-b79311170',
+    url: 'https://www.linkedin.com/in/pratham-verma-8b7134215/',
     icon: 'linkedin',
   },
   {

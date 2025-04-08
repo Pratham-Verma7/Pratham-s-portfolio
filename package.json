@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "homepage": "https://salonikabra.netlify.app",
-  "description": "Portfolio site for Dr. Saloni Kabra",
+  "description": "Portfolio site for Pratham verma",
   "repository": "https://github.com/HamishMW/portfolio.git",
   "author": "Dr. Saloni Kabra <hello@hamishw.com>",
   "devDependencies": {
@@ -40,7 +40,7 @@
     "@sendgrid/mail": "^7.7.0",
     "cors": "^2.8.5",
     "fathom-client": "^3.5.0",
-    "framer-motion": "^7.1.0",
+    "framer-motion": "^7.10.3",
     "mdx-bundler": "^9.0.1",
     "next": "^12.2.5",
     "react": "^18.2.0",

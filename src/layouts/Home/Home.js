@@ -39,12 +39,11 @@ import { Link } from 'components/Link';
 import styles from './Home.module.css';
 
 const disciplines = [
-  'Doctor',
-  'Academic Writer',
-  'Medical Content Writer',
+  'Flutter Developer',
+  'Full-Stack Developer',
   'Technical Writer',
-  'SEO Content Writer',
-  'Website Content Writer',
+  'Writer',
+  'Open Source Contributor',
   'Blogger',
 ];
 
