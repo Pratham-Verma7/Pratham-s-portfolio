@@ -20,36 +20,22 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      Hi, I&#39;m Dr. Saloni, a doctor and professional writer with over five years of
-      experience in the healthcare industry. I&#39;m currently working with HealthOk,
-      where I combine my passion for helping people live healthier lives with my writing
-      skills to communicate important health information in a clear, concise way. I&#39;ve
-      had the opportunity to work with a diverse range of patients, from children to
-      seniors, and I find nothing more rewarding than making a positive impact on
-      someone&#39;s health and wellbeing.
+      I’m a backend-heavy full-stack developer with a love for turning raw ideas into working apps.
+      Over the past few years, I’ve built real-time systems, social platforms, and daily-use tools using technologies like Node.js, Firebase, Flutter, and React Native. Whether it’s an alert-based fuel tracker or a smart local-community platform — I enjoy solving real-world problems and shipping fast.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In addition to my work at HealthOk, I am also a freelance writer who has worked with
-      clients from all over the world. Whether it&#39;s academic writing, medical writing,
-      product descriptions, or technical writing, I always strive to deliver content that
-      is well-researched, informative, and engaging. My experience includes creating
-      social media posts, developing content strategies, generating landing page copy, and
-      more.
+      I started with mobile app development in Flutter, but soon found myself diving into backend APIs, secure data flows, and serverless functions.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      Apart from clinical services and writing, some other activities that I love to do!
-      <Text data-visible={visible} size="l" as="p">
-        🎯 Travel
-      </Text>
-      <Text data-visible={visible} size="l" as="p">
-        🎯 Playing Chess
-      </Text>
-      <Text data-visible={visible} size="l" as="p">
-        🎯 Singing
-      </Text>
+    When I’m not coding, you’ll probably find me:
+      <Text data-visible={visible} size="l" as="p">⛰️ Trekking through the Himalayas with my crew at Yatra Hikes</Text>
+      <Text data-visible={visible} size="l" as="p">♟️ Playing Cricket or quick Walk</Text>
+      <Text data-visible={visible} size="l" as="p">☕ Catching up on tech ideas over a strong cup of chai</Text>
     </Text>
   </Fragment>
 );
+
+
 
 export const Profile = ({ id, visible, sectionRef }) => {
   const [focused, setFocused] = useState(false);

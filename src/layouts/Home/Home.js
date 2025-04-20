@@ -16,6 +16,8 @@ import landingPage from 'assets/landingPage.jpg';
 import landingPageLarge from 'assets/landingPage-large.jpg';
 import productEquipement from 'assets/productEquipement.jpg';
 import productEquipementLarge from 'assets/productEquipement-large.jpg';
+import productEquipement2 from 'assets/volkihar-slide-1.jpg';
+import productEquipement2Large from 'assets/volkihar-slide-1-large.jpg';
 import procedurePage from 'assets/procedurePage.jpg';
 import procedurePageLarge from 'assets/procedurePage-large.jpg';
 import technicalWriting from 'assets/technical-writing.jpg';
@@ -37,14 +39,15 @@ import { ProjectSummary } from 'layouts/Home/ProjectSummary';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'components/Link';
 import styles from './Home.module.css';
+import { useRouter } from 'next/router';
 
 const disciplines = [
   'Flutter Developer',
+  '10+ App and Website Develop',
   'Full-Stack Developer',
+  'Mobile App Developer',
   'Technical Writer',
-  'Writer',
   'Open Source Contributor',
-  'Blogger',
 ];
 
 const otherServices = [
@@ -59,6 +62,7 @@ const otherServices = [
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
   const [scrollIndicatorHidden, setScrollIndicatorHidden] = useState(false);
+  const router = useRouter();
   const intro = useRef();
   const projectOne = useRef();
   const projectTwo = useRef();
@@ -67,6 +71,9 @@ export const Home = () => {
   const projectFive = useRef();
   const projectSix = useRef();
   const about = useRef();
+  const handleProjectClick = (projectId) => {
+    router.push(`/projects/${projectId}`);
+  };
 
   useEffect(() => {
     const sections = [
@@ -78,6 +85,7 @@ export const Home = () => {
       projectFive,
       projectSix,
       about,
+      
     ];
 
     const sectionObserver = new IntersectionObserver(
@@ -116,9 +124,8 @@ export const Home = () => {
   return (
     <div className={styles.home}>
       <Meta
-        title="Writer + Healthcare Provider"
-        description="Design portfolio of Dr. Saloni Kabra — a product designer working on web & mobile
-          apps with a focus on motion, experience design, and accessibility."
+        title="Developer + Full Stack"
+        description="Design portfolio of Pratham Verma, a developer and full-stack engineer with expertise in Flutter, React, and technical writing. Explore my projects and services."
       />
       <Intro
         id="intro"
@@ -132,10 +139,10 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Academic Writing"
-        description="With extensive knowledge of research and academic writing styles, I offer high-quality and well-researched academic writing services, including literature reviews, research papers, reports, etc."
-        buttonText="View Assignments"
-        buttonLink="articles/?0=Academic+Writing"
+        title="Someone:- connection app" 
+        description="Someone App is a community-driven platform that connects people based on shared interests and location. Users can join or create groups(local and global), find nearby events, and build meaningful local or global connections."
+        buttonText="View App"
+        onButtonClick={() => handleProjectClick('someone-app')}
         model={{
           type: 'phone',
           alt: 'Annotating a biomedical image in the Slice app',
@@ -156,10 +163,10 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Medical Content Writing"
-        description="I provide professional medical content writing services that are accurate, informative, and engaging. From blog posts and articles to social media content and website copy, I help clients communicate complex medical information in an accessible and easy-to-understand way."
-        buttonText="View Content"
-        buttonLink="/articles/?0=Medical+Content+Writing"
+        title="Admin panel"
+        description="Fuel Hub Admin Panel is a real-time fuel price management system that allows admins to update station prices, monitor station status, and send alerts, ensuring seamless communication and control across locations."
+        buttonText="View panel"
+        onButtonClick={() => handleProjectClick('admin-panel')}
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',
@@ -176,10 +183,10 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Landing Page Copy"
-        description="As a medical writer, I create compelling landing page copy that highlights the benefits of medical products and services. I help businesses convert website visitors into leads and customers through persuasive and engaging copy."
-        buttonText="View Content"
-        buttonLink="/articles/?0=Landing+Page+Copy"
+        title="YatraHikes:- Landing Page"
+        description="YatraHikes is a trekking community and booking platform organizing Himalayan treks across Uttarakhand, Himachal, and Kashmir—offering curated itineraries, local guides, and authentic mountain experiences for adventurers and travelers."
+        buttonText="View Page"
+        onButtonClick={() => handleProjectClick('yatra-hikes')}
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',
@@ -197,10 +204,10 @@ export const Home = () => {
         sectionRef={projectFour}
         visible={visibleSections.includes(projectFour.current)}
         index={4}
-        title="Service Page"
-        description="With my expertise in medical writing, I craft informative and persuasive service pages that highlight the unique benefits of medical services. I help clients differentiate themselves from competitors and drive more website traffic."
-        buttonText="View Content"
-        buttonLink="/articles/?0=Service+Page"
+        title="Teenlink"
+        description="TeenLink is a dynamic social platform where teens connect through shared interests, join local or global groups, and discover events, fostering meaningful friendships and real-world interactions in a safe space"
+        buttonText="View App"
+        onButtonClick={() => handleProjectClick('Teenlink')}
         model={{
           type: 'phone',
           alt: 'App login screen',
@@ -221,17 +228,21 @@ export const Home = () => {
         sectionRef={projectFive}
         visible={visibleSections.includes(projectFive.current)}
         index={5}
-        title="Product Description"
-        description=" I specialize in creating clear, concise, and persuasive product descriptions for medical products. Whether it's medical devices, supplements, or pharmaceuticals, I help clients convey the benefits and features of their products in an easy-to-understand way."
-        buttonText="View Content"
-        buttonLink="/articles/?0=Product+Description"
+        title="FuelHub"
+        description="FuelHub App helps users track real-time fuel prices, set custom alerts, and find nearby stations. It ensures smarter fuel decisions with location-based updates and personalized notifications for every user."
+        buttonText="View App"
+        onButtonClick={() => handleProjectClick('fuelhub')}
         model={{
-          type: 'laptop',
+          type: 'phone',
           alt: 'Annotating a biomedical image in the Slice app',
           textures: [
             {
               srcSet: [productEquipement, productEquipementLarge],
-              placeholder: sliceTexturePlaceholder,
+              placeholder: gamestackTexture2Placeholder,
+            },
+            {
+              srcSet: [productEquipement2, productEquipement2Large],
+              placeholder: gamestackTexture2Placeholder,
             },
           ],
         }}
@@ -245,7 +256,7 @@ export const Home = () => {
         title="SEO Writing"
         description="I specialize in creating SEO-friendly medical content that helps businesses rank higher in search engine results. With my knowledge of keyword research and on-page optimization, I help clients attract more website traffic and generate more leads."
         buttonText="View Content"
-        buttonLink="/articles/?0=SEO+Writing"
+        onButtonClick={() => handleProjectClick('seo-writing')}
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',

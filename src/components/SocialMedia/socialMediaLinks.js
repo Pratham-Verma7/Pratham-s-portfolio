@@ -5,8 +5,9 @@ export const socialLinks = [
     icon: 'linkedin',
   },
   {
-    label: 'Medium',
-    url: 'https://medium.com/@saloni_kabra',
-    icon: 'medium',
+    label: 'Twitter',
+    url: 'https://x.com/Are_pratham_tum',
+    icon: 'twitter',
   },
+  
 ];

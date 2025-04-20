@@ -10,7 +10,7 @@ _______________________________________________________________________________
 
 DEVELOPER
 
-Madhav Kabra
+Pratham verma
 Hand crafted design & web development
 
 Design tools:
@@ -18,7 +18,7 @@ Figma
 Photoshop
 Blender
 
-github.com/madhavkabra
+github.com/Pratham-Verma7
 
 _______________________________________________________________________________
 

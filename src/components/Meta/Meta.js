@@ -1,8 +1,8 @@
 import Head from 'next/head';
 
 const siteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL;
-const name = 'Dr. Saloni Kabra';
-const twitterHandle = '@hamishMW';
+const name = 'Pratham Verma';
+const twitterHandle = '@Are_pratham_tum';
 const defaultOgImage = `${siteUrl}/social-image.png`;
 
 export const Meta = ({ title, description, prefix = name, ogImage = defaultOgImage }) => {
@@ -16,7 +16,7 @@ export const Meta = ({ title, description, prefix = name, ogImage = defaultOgIma
 
       <meta
         name="keywords"
-        content="portfolio, Dr. Saloni Kabra, Doctor, Academic Writer, Medical Content Writer, Technical Writer, SEO Content Writer, Website Content Writer, Blogger"
+        content="portfolio, Pratham verma, Developer, Flutter, Full stack developer, Technical Writer, Writer, Genrative ai, Mobile Developer"
       />
       <link rel="canonical" href="https://salonikabra.netlify.app" />
 

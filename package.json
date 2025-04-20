@@ -4,7 +4,7 @@
   "homepage": "https://salonikabra.netlify.app",
   "description": "Portfolio site for Pratham verma",
   "repository": "https://github.com/HamishMW/portfolio.git",
-  "author": "Dr. Saloni Kabra <hello@hamishw.com>",
+  "author": "Pratham verma <hello@hamishw.com>",
   "devDependencies": {
     "@mapbox/rehype-prism": "^0.8.0",
     "@storybook/addon-a11y": "^6.5.10",
@@ -45,6 +45,7 @@
     "next": "^12.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
     "react-pdf": "^6.2.2",
     "three": "^0.146.0",
     "three-stdlib": "^2.18.1"

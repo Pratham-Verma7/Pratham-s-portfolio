@@ -26,6 +26,7 @@ export const ProjectSummary = ({
   buttonText,
   buttonLink,
   alternate,
+  onButtonClick,
   ...rest
 }) => {
   const [focused, setFocused] = useState(false);
@@ -54,6 +55,13 @@ export const ProjectSummary = ({
     </svg>
   );
 
+  const handleButtonClick = event => {
+    if (onButtonClick) {
+      event.preventDefault();
+      onButtonClick();
+    }
+  };
+
   const renderDetails = visible => (
     <div className={styles.details}>
       <div aria-hidden className={styles.index}>
@@ -81,7 +89,12 @@ export const ProjectSummary = ({
       </Text>
       {buttonText && (
         <div className={styles.button} data-visible={visible}>
-          <Button iconHoverShift href={buttonLink} iconEnd="arrowRight">
+          <Button 
+            iconHoverShift 
+            href={buttonLink} 
+            iconEnd="arrowRight" 
+            onClick={handleButtonClick}
+          >
             {buttonText}
           </Button>
         </div>
@@ -134,7 +147,7 @@ export const ProjectSummary = ({
                     sizes: phoneSizes,
                   },
                 },
-                {
+                model.textures.length > 1 && {
                   ...deviceModels.phone,
                   position: { x: 0.6, y: -0.5, z: 0.3 },
                   texture: {
@@ -142,7 +155,7 @@ export const ProjectSummary = ({
                     sizes: phoneSizes,
                   },
                 },
-              ]}
+              ].filter(Boolean)}
             />
           </div>
         </>
