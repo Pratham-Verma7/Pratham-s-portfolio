@@ -7,6 +7,8 @@ module.exports = {
     if (isServer) {
       require('./scripts/generate-sitemap');
       require('./scripts/draco');
+    }
+    if (!isServer) {
       config.resolve.fallback = {
         fs: false,
         path: false,
