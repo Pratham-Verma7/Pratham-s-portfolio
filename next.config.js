@@ -7,6 +7,12 @@ module.exports = {
     if (isServer) {
       require('./scripts/generate-sitemap');
       require('./scripts/draco');
+      config.resolve.fallback = {
+        fs: false,
+        path: false,
+        crypto: false,
+        os: false,
+      };
     }
 
     // Import `svg` files as React components
