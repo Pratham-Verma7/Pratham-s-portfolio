@@ -90,12 +90,8 @@ export const getStaticProps = async ({ params }) => {
   const { time } = readingTime(matter.content);
   const timecode = formatTimecode(time);
 
-  const ogImage = await generateOgImage({
-    title: frontmatter.title,
-    date: frontmatter.date,
-    banner: frontmatter.banner,
-    timecode,
-  });
+  const ogImage = `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/og?title=${encodeURIComponent(frontmatter.title)}&date=${frontmatter.date}&banner=${frontmatter.banner}&timecode=${timecode}`;
+
 
   return {
     props: { code, frontmatter, timecode, ogImage },

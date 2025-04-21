@@ -37,6 +37,7 @@
     "stylelint-config-standard": "^26.0.0"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^5.10.7",
     "@sendgrid/mail": "^7.7.0",
     "cors": "^2.8.5",
     "fathom-client": "^3.5.0",
