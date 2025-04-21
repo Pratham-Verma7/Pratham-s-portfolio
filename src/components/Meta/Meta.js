@@ -18,7 +18,7 @@ export const Meta = ({ title, description, prefix = name, ogImage = defaultOgIma
         name="keywords"
         content="portfolio, Pratham verma, Developer, Flutter, Full stack developer, Technical Writer, Writer, Genrative ai, Mobile Developer"
       />
-      <link rel="canonical" href="https://salonikabra.netlify.app" />
+      <link rel="canonical" href="https://prathamapp.vercel.app/" />
 
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:alt" content="Banner for the site" />
