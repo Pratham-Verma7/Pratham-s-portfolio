@@ -12,8 +12,23 @@ module.exports = {
       config.resolve.fallback = {
         fs: false,
         path: false,
-        crypto: false,
         os: false,
+        net: false,
+        tls: false,
+        child_process: false,
+        crypto: false,
+        stream: false,
+        http: false,
+        https: false,
+        zlib: false,
+        util: false,
+        assert: false,
+        buffer: false,
+        url: false,
+        constants: false,
+        module: false,
+        readline: false,
+        vm: false,
       };
     }
 
