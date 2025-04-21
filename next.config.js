@@ -29,6 +29,18 @@ module.exports = {
         module: false,
         readline: false,
         vm: false,
+        dns: false,
+        dgram: false,
+        querystring: false,
+        punycode: false,
+        string_decoder: false,
+        timers: false,
+        tty: false,
+        v8: false,
+        worker_threads: false,
+        webcrypto: false,
+        perf_hooks: false,
+        http2: false,
       };
     }
 
