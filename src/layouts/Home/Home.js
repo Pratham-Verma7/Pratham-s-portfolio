@@ -40,6 +40,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'components/Link';
 import styles from './Home.module.css';
 import { useRouter } from 'next/router';
+import { SkillsSection } from 'layouts/Home/SkillsSection';
 
 const disciplines = [
   'Flutter Developer',
@@ -71,6 +72,7 @@ export const Home = () => {
   const projectFive = useRef();
   const projectSix = useRef();
   const about = useRef();
+  const skills = useRef();
   const handleProjectClick = (projectId) => {
     router.push(`/projects/${projectId}`);
   };
@@ -84,8 +86,8 @@ export const Home = () => {
       projectFour,
       projectFive,
       projectSix,
+      skills,
       about,
-      
     ];
 
     const sectionObserver = new IntersectionObserver(
@@ -139,7 +141,7 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Someone:- connection app" 
+        title="Someone:- connection app"
         description="Someone App is a community-driven platform that connects people based on shared interests and location. Users can join or create groups(local and global), find nearby events, and build meaningful local or global connections."
         buttonText="View App"
         onButtonClick={() => handleProjectClick('someone-app')}
@@ -269,18 +271,11 @@ export const Home = () => {
         }}
       />
 
-      <Heading className={styles.title} level={3}>
-        Other Service&#39;s
-      </Heading>
-      <div className={styles.buttonContainer}>
-        <Text className={styles.anchorTag}>Healthcare professional</Text>
-        {otherServices.map((data, index) => (
-          <div className={styles.linkTag} key={index}>
-            <Link href={data.link}>{data.service}</Link>
-          </div>
-        ))}
-        <Text className={styles.anchorTag}>Editing and Proofreading</Text>
-      </div>
+      <SkillsSection
+        id="skills"
+        sectionRef={skills}
+        visible={visibleSections.includes(skills.current)}
+      />
 
       <Profile
         sectionRef={about}

@@ -94,7 +94,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                   className={styles.profileText}
                   style={{
                     top: '-110px',
-                    left: '91px',
+                    left: '30px',
                     scale: '0.85',
                     transform: 'rotate(90deg)',
                   }}
